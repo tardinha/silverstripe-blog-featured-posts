@@ -14,6 +14,6 @@ class FeaturedBlogPostExtension extends DataExtension
 	 */
 	public function updateCMSFields(FieldList $fields) {
 		$sidebar = $fields->fieldByName('blog-admin-sidebar');
-		$sidebar->insertBefore('PublishDate', new CheckboxField('IsFeatured', 'Mark as featured post'));
+		$sidebar->insertBefore(new CheckboxField('IsFeatured', 'Mark as featured post'), 'PublishDate');
     }
 }
